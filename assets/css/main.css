@@ -29,14 +29,18 @@
 
 /* Navigation */
 
-.header__nav {
+.header__container {
     position: absolute;
     top: var(--covid-info-height);
     left: 0;
     right: 0;
+}
+
+.header__nav {
     display: flex;
-    margin-top: 16px;
     align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /* Logo */
@@ -180,9 +184,10 @@
 
 .header__menu {
     position: absolute;
+    z-index: 2;
     right: 0;
     top: calc(100% + 12px);
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 12px;
     display: none;
     overflow: hidden;
@@ -209,4 +214,392 @@
 
 .header__menu-item:hover {
     background-color: rgb(204, 204, 204, 0.15);
+}
+
+/* Form */
+
+.header__form {
+    display: flex;
+}
+
+.header__form-list {
+    position: relative;
+    display: flex;
+    margin: auto;
+    background-color: var(--white-color);
+    padding: 0;
+    width: 850px;
+    border-radius: var(--form-border-radius-width);
+    border: 1px solid #ddd;
+}
+
+.header__form-item {
+    position: relative;
+    border-radius: var(--form-border-radius-width);
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+.header__form-item:hover,
+.header__form-item:hover .header__form-input {
+    /* background-color: #ebebeb; */
+    background-color: #ebebeb;
+}
+
+.header__form-location {
+    flex: 1.5;
+}
+
+.header__form-location:hover .header__form-location-list {
+    display: block;
+}
+
+.header__form-location-list {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    width: 500px;
+    background-color: var(--white-color);
+    font-size: 1.6rem;
+    padding: 28px 0px 16px;
+    border-radius: var(--form-border-radius-width);
+    overflow: hidden;
+    box-shadow: 0 4px 16px 4px rgb(0 0 0 / 20%);
+    display: none;
+}
+
+.header__form-location-address {
+    display: flex;
+    align-items: center;
+    padding: 8px 32px;
+}
+
+.header__form-location-address:hover {
+    background-color: #f7f7f7;
+}
+
+.header__form-location-img {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #e4e4e4;
+}
+
+.header__form-location-icon {
+    color: #000;
+}
+
+.header__form-location-name {
+    margin-left: 16px;
+    color: var(--text-color);
+}
+
+.header__form-room {
+    flex: 1;
+}
+
+.header__form-location::after,
+.header__form-room::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    content: "";
+    border-right: 1px solid #ebebeb;
+    height: 50%;
+    display: block;
+}
+
+.header__form-customer {
+    position: relative;
+    flex: 1.22222;
+}
+
+.header__form-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header__form-input {
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    outline: none;
+}
+
+.header__form-action {
+    color: #757575;
+    font-size: 1.3rem;
+}
+
+.header__form-search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    background-color: #ff385c;
+    padding: 18px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    transition: width 2s linear;
+}
+
+.header__form-search-btn.change-color {
+    background-image: linear-gradient(90deg,#e61e50, #d80765);
+}
+
+.header__form-search-btn:hover {
+    background-color: #e41c5d;
+    cursor: pointer;
+}
+
+.header__form-search-icon {
+    color: var(--white-color);
+    font-size: 1.4rem;
+}
+
+.header__form-search-name {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    padding-left: 4px;
+    display: none;
+    user-select: none;
+}
+
+/* Form date */
+.header__form-date {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    padding: 32px;
+    border-radius: var(--form-border-radius-width);
+    box-shadow: 0 4px 16px 4px rgb(0 0 0 / 20%);
+}
+
+.header__form-date-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.header__form-date-buttons {
+    background-color: #ebebeb;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.header__form-date-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.header__form-date-btn:not(.active):hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.header__form-date-btn.active {
+    background-color: var(--white-color);
+    cursor: default;
+}
+
+.header__form-date-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 52px;
+}
+
+.header__form-date-calendar {
+    flex: 1;
+}
+
+.header__form-date-month {
+    display: flex;
+    align-items: center;
+}
+
+.header__form-date-month-icon {
+    font-size: 1.2rem;
+    padding: 12px;
+    margin: 0 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header__form-date-month-icon:hover {
+    background-color: #f7f7f7;
+}
+
+.header__form-date-month-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.header__form-date-table {
+    margin-top: 18px;
+    width: 100%;
+    padding: 0 28px;
+}
+
+.header_form-date--old-date {
+    color: #d9d9d9;
+}
+
+.header__form-date-thead th {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #717171;
+    font-weight: 400;
+}
+
+.header__form-date-tbody td {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 12px 14px;
+    font-weight: 500;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+}
+
+.header_form-date--new-date:hover {
+    border-color: #000;
+    cursor: pointer;
+}
+
+.header_form-date--new-date.selected {
+    background-color: #000;
+    color: var(--white-color);
+}
+
+.header__form-date-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 52px;
+}
+
+.header__form-date-question {
+    font-size: 1.8rem;
+    color: #717171;
+}
+
+.header__form-duration-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 24px 0 30px;
+}
+
+.header__form-duration-time {
+    font-size: 1.4rem;
+    padding: 6px 14px;
+    margin: 0 4px;
+    background-color: var(--white-color);
+    border-radius: var(--form-border-radius-width);
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+}
+
+.header__form-duration-time:hover {
+    border-color: #000;
+}
+
+.header__form-duration-time.selected {
+    background-color: #f7f7f7;
+    border: 2px solid #000;
+}
+
+.header__form-month-list {
+    display: flex;
+    margin: 24px 0;
+    width: 716px;
+}
+
+.header__form-month-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid #b0b0b0;
+    border-radius: 16px;
+    margin: 0 4px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.header__form-month-wrapper:hover {
+    border-color: #000;
+}
+
+.header__form-month-wrapper.active {
+    background-color: #f7f7f7;
+    border: 2px solid #000;
+}
+
+.header__form-month-wrapper.active .header__form-month-icon {
+    color: #000;
+}
+
+.header__form-month-icon {
+    font-size: 3.2rem;
+    margin-top: 3.6rem;
+    color: #b0b0b0;
+}
+
+.header__form-month-name {
+    font-size: 1.4rem;
+    margin-top: 16px;
+}
+
+/* Heading slogan */
+.header__slogan {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__slogan-title {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #222222;
+    letter-spacing: -2px;
+}
+
+.header__slogan-desc {
+    font-size: 2rem;
+    letter-spacing: -0.2px;
+    margin-top: 20px;
+}
+
+.header__slogan-button {
+    margin-top: 24px;
+}
+
+.header__slogan-link {
+    padding: 10px 16px;
+    color: var(--white-color);
+    background-color:#222222;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
 }

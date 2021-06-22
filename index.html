@@ -25,57 +25,317 @@
                     </span>
                 </a>
             </div>
-            <div class="header__nav grid">
-                <div class="header__nav-logo">
-                    <a href="" class="header__nav-logo-link">
-                        <img src="./assets/img/logo/Airbnb-Logo.png" alt="" class="header__nav-logo-img">
-                    </a>
-                </div>
-        
-                <ul class="header__navbar">
-                    <li class="header__navbar-item">
-                        <span class="header__navbar-content">Nơi ở</span>
-                    </li>
-                    <li class="header__navbar-item active">
-                        <span class="header__navbar-content">Trải nghiệm</span>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="" class="header__navbar-content">Trải nghiệm trực tuyến</a>
-                    </li>
-                </ul>
-        
-                <div class="header__wrapper">
-                    <ul class="header__wrapper-list">
-                        <li class="header__wrapper-item">
-                            <a href="" class="header__host-link">Trở thành chủ nhà</a>
+            <!-- Navigation bar -->
+            <div class="header__container">
+                <div class="header__nav grid">
+                    <div class="header__nav-logo">
+                        <a href="" class="header__nav-logo-link">
+                            <img src="./assets/img/logo/Airbnb-Logo.png" alt="" class="header__nav-logo-img">
+                        </a>
+                    </div>
+                    <ul class="header__navbar">
+                        <li class="header__navbar-item active">
+                            <span class="header__navbar-content">Nơi ở</span>
                         </li>
-                        <li class="header__wrapper-item">
-                            <i class="header__language-icon ti-world"></i>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-content">Trải nghiệm</span>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-content">Trải nghiệm trực tuyến</a>
                         </li>
                     </ul>
-                    <div class="header__wrapper-menu">
-                        <i class="header__bar-icon fas fa-bars"></i>
-                        <i class="header__ava-icon fas fa-user-circle"></i>
-        
-                        <div class="header__menu">
-                            <ul class="header__menu-group">
-                                <div class="header__menu-item more-weight">Đăng ký</div>
-                                <div class="header__menu-item">Đăng nhập</div>
-                            </ul>
-                            <ul class="header__menu-group">
-                                <div class="header__menu-item">Cho thuê nhà</div>
-                                <div class="header__menu-item">Tổ chức trải nghiệm</div>
-                                <div class="header__menu-item">Trợ giúp</div>
-                            </ul>
+                    <div class="header__wrapper">
+                        <ul class="header__wrapper-list">
+                            <li class="header__wrapper-item">
+                                <a href="" class="header__host-link">Trở thành chủ nhà</a>
+                            </li>
+                            <li class="header__wrapper-item">
+                                <i class="header__language-icon ti-world"></i>
+                            </li>
+                        </ul>
+                        <div class="header__wrapper-menu">
+                            <i class="header__bar-icon fas fa-bars"></i>
+                            <i class="header__ava-icon fas fa-user-circle"></i>
+                            <div class="header__menu">
+                                <ul class="header__menu-group">
+                                    <div class="header__menu-item more-weight">Đăng ký</div>
+                                    <div class="header__menu-item">Đăng nhập</div>
+                                </ul>
+                                <ul class="header__menu-group">
+                                    <div class="header__menu-item">Cho thuê nhà</div>
+                                    <div class="header__menu-item">Tổ chức trải nghiệm</div>
+                                    <div class="header__menu-item">Trợ giúp</div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="header__form grid">
+                    <ul class="header__form-list">
+                        <li class="header__form-item header__form-location">
+                            <div class="header__form-title">Địa điểm</div>
+                            <input type="text" name="" id="" class="header__form-input" placeholder="Bạn sắp đi đâu ?">
+                            <ul class="header__form-location-list">
+                                <li class="header__form-location-address">
+                                    <div class="header__form-location-img">
+                                        <i class="header__form-location-icon fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="header__form-location-name">Da Nang, Vietnam</div>
+                                </li>
+
+                                <li class="header__form-location-address">
+                                    <div class="header__form-location-img">
+                                        <i class="header__form-location-icon fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="header__form-location-name">Ha Noi, Vietnam</div>
+                                </li>
+
+                                <li class="header__form-location-address">
+                                    <div class="header__form-location-img">
+                                        <i class="header__form-location-icon fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="header__form-location-name">Ho Chi Minh, Vietnam</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__form-item header__form-room">
+                            <div class="header__form-title">Nhận phòng</div>
+                            <span class="header__form-action">Thêm ngày</span>
+                        </li>
+                        <li class="header__form-item header__form-room">
+                            <div class="header__form-title">Trả phòng</div>
+                            <span class="header__form-action">Thêm ngày</span>
+                        </li>
+                        
+                        <!-- <div class="header__form-date">
+                            <div class="header__form-date-heading">
+                                <div class="header__form-date-buttons">
+                                    <button class="header__form-date-btn">Lịch</button>
+                                    <button class="header__form-date-btn active">Ngày linh hoạt</button>
+                                </div>
+                            </div> -->
+                            <!-- Form date -->
+                            <!-- <div class="header__form-date-container">
+                                <div class="header__form-date-calendar">
+                                    <div class="header__form-date-month">
+                                        <i class="header__form-date-month-icon ti-angle-left"></i>
+                                        <div class="header__form-date-month-title">tháng 6 năm 2021</div>
+                                    </div>
+                                    <table class="header__form-date-table">
+                                        <thead class="header__form-date-thead">
+                                            <tr class="header__form-date-thead-row">
+                                                <th>T2</th>
+                                                <th>T3</th>
+                                                <th>T4</th>
+                                                <th>T5</th>
+                                                <th>T6</th>
+                                                <th>T7</th>
+                                                <th>CN</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="header__form-date-tbody">
+                                            <tr>
+                                                <td></td>
+                                                <td class="header_form-date--old-date selected">1</td>
+                                                <td class="header_form-date--old-date">2</td>
+                                                <td class="header_form-date--old-date">3</td>
+                                                <td class="header_form-date--old-date">4</td>
+                                                <td class="header_form-date--old-date">5</td>
+                                                <td class="header_form-date--old-date">6</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--old-date">7</td>
+                                                <td class="header_form-date--old-date">8</td>
+                                                <td class="header_form-date--old-date">9</td>
+                                                <td class="header_form-date--old-date">10</td>
+                                                <td class="header_form-date--old-date">11</td>
+                                                <td class="header_form-date--old-date">12</td>
+                                                <td class="header_form-date--old-date">13</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--old-date">14</td>
+                                                <td class="header_form-date--old-date">15</td>
+                                                <td class="header_form-date--old-date">16</td>
+                                                <td class="header_form-date--old-date">17</td>
+                                                <td class="header_form-date--old-date">18</td>
+                                                <td class="header_form-date--old-date">19</td>
+                                                <td class="header_form-date--old-date">20</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--old-date">21</td>
+                                                <td class="header_form-date--new-date">22</td>
+                                                <td class="header_form-date--new-date">23</td>
+                                                <td class="header_form-date--new-date">24</td>
+                                                <td class="header_form-date--new-date">25</td>
+                                                <td class="header_form-date--new-date">26</td>
+                                                <td class="header_form-date--new-date">27</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--new-date">28</td>
+                                                <td class="header_form-date--new-date">29</td>
+                                                <td class="header_form-date--new-date">30</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>                                            
+                                        </tbody>
+                                    </table>
+                                </div> 
+                                <div class="header__form-date-calendar">
+                                    <div class="header__form-date-month">
+                                        <div class="header__form-date-month-title">tháng 7 năm 2021</div>
+                                        <i class="header__form-date-month-icon ti-angle-right"></i>
+                                    </div>
+                                    <table class="header__form-date-table">
+                                        <thead class="header__form-date-thead">
+                                            <tr class="header__form-date-thead-row">
+                                                <th>T2</th>
+                                                <th>T3</th>
+                                                <th>T4</th>
+                                                <th>T5</th>
+                                                <th>T6</th>
+                                                <th>T7</th>
+                                                <th>CN</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="header__form-date-tbody">
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="header_form-date--new-date">1</td>
+                                                <td class="header_form-date--new-date">2</td>
+                                                <td class="header_form-date--new-date">3</td>
+                                                <td class="header_form-date--new-date">4</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--new-date">5</td>
+                                                <td class="header_form-date--new-date">6</td>
+                                                <td class="header_form-date--new-date">7</td>
+                                                <td class="header_form-date--new-date">8</td>
+                                                <td class="header_form-date--new-date">9</td>
+                                                <td class="header_form-date--new-date">10</td>
+                                                <td class="header_form-date--new-date">11</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--new-date">12</td>
+                                                <td class="header_form-date--new-date">13</td>
+                                                <td class="header_form-date--new-date">14</td>
+                                                <td class="header_form-date--new-date">15</td>
+                                                <td class="header_form-date--new-date">16</td>
+                                                <td class="header_form-date--new-date">17</td>
+                                                <td class="header_form-date--new-date">18</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--new-date">19</td>
+                                                <td class="header_form-date--new-date">20</td>
+                                                <td class="header_form-date--new-date">21</td>
+                                                <td class="header_form-date--new-date">22</td>
+                                                <td class="header_form-date--new-date">23</td>
+                                                <td class="header_form-date--new-date">24</td>
+                                                <td class="header_form-date--new-date">25</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="header_form-date--new-date">26</td>
+                                                <td class="header_form-date--new-date">27</td>
+                                                <td class="header_form-date--new-date">28</td>
+                                                <td class="header_form-date--new-date">29</td>
+                                                <td class="header_form-date--new-date">30</td>
+                                                <td class="header_form-date--new-date">31</td>
+                                                <td></td>
+                                            </tr>                                            
+                                        </tbody>
+                                    </table>
+                                </div>                      
+                            </div> -->
+
+                            <!-- Form flexible date -->
+                            <!-- <div class="header__form-date-wrapper">
+                                <div class="header__form-date-question">Bạn muốn ở trong bao lâu?</div>
+                                <ul class="header__form-duration-list">
+                                    <li class="header__form-duration-time selected">Cuối tuần</li>                                   
+                                    <li class="header__form-duration-time">1 tuần</li>                                   
+                                    <li class="header__form-duration-time">1 tháng</li>                                   
+                                </ul>
+                                <div class="header__form-date-question">Bạn muốn đi khi nào?</div>
+                                <ul class="header__form-month-list">
+                                    <li class="header__form-month-wrapper active">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 7</div>
+                                    </li>
+                                    <li class="header__form-month-wrapper">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 8</div>
+                                    </li>
+                                    <li class="header__form-month-wrapper">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 9</div>
+                                    </li>
+                                    <li class="header__form-month-wrapper">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 10</div>
+                                    </li>
+                                    <li class="header__form-month-wrapper">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 11</div>
+                                    </li>
+                                    <li class="header__form-month-wrapper">
+                                        <i class="header__form-month-icon ti-calendar"></i>
+                                        <div class="header__form-month-name">Tháng 12</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+
+                        <li class="header__form-item header__form-customer">
+                            <div class="header__form-package">
+                                <div class="header__form-title">Khách</div>
+                                <span class="header__form-action">Thêm Khách</span>
+                            </div>
+                        </li>
+                        <div class="header__form-search-btn">
+                            <i class="header__form-search-icon ti-search"></i>
+                            <span class="header__form-search-name">Tìm kiếm</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slogan -->
+            <div class="header__slogan">
+                <span class="header__slogan-title">Thiên nhiên đẹp tươi</span>
+                <span class="header__slogan-desc">Danh sách Yêu Thích do Airbnb tuyển chọn.</span>
+                <div class="header__slogan-button">
+                    <a href="" class="header__slogan-link">Lấy cảm hứng</a>
                 </div>
             </div>
         </header>
         
-        <div class="content"></div>
+        <div class="content">
+            
+        </div>
         
         <footer class="footer"></footer>
+        <script>
+            var $ = (selector) => document.querySelector(selector);
+            searchBtnElement = $('.header__form-search-btn');
+            console.log(searchBtnElement);
 
+            searchBtnElement.onclick = function(e) {
+                e.stopPropagation();
+                console.log('onclick');
+                this.classList.toggle('change-color');
+                $('.header__form-customer').style.flex = "2";
+                $('.header__form-search-name').style.display = "block";
+            }
+            
+            window.onclick = function() {
+                searchBtnElement.classList.remove('change-color');
+                $('.header__form-customer').style.flex = null;
+                $('.header__form-search-name').style.display = null;
+            }
+        </script>
     </body>
 </html>

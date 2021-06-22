@@ -3,6 +3,7 @@
     --text-color: #222;
     --covid-info-height: 59px;
     --white-color: #fff;
+    --form-border-radius-width: 40px;
 }
 
 /* Reset CSS */
@@ -25,6 +26,12 @@ html {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 /* 12 column grid system */
