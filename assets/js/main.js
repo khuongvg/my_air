@@ -2,13 +2,13 @@ var $ = (selector) => document.querySelector(selector);
 var $$ = (selector) => document.querySelectorAll(selector);
 
 // Element
-var searchBtnElement = $('.header__form-search-btn');
-var menuElement = $('.header__wr-menu');
-var formElements = Array.from($$('.header__form-item'));
-var calendarBtn = $('.header__form-date-btn[category="calendar"]');
-var flexibleBtn = $('.header__form-date-btn[category="flexible"]');
-var durationBtns = Array.from($$('.header__form-duration-time'));
-var selectedMonths = Array.from($$('.header__form-month-wrapper'));
+const searchBtnElement = $('.header__form-search-btn');
+const menuElement = $('.header__wr-menu');
+const formElements = Array.from($$('.header__form-item'));
+const calendarBtn = $('.header__form-date-btn[category="calendar"]');
+const flexibleBtn = $('.header__form-date-btn[category="flexible"]');
+const durationBtns = Array.from($$('.header__form-duration-time'));
+const selectedMonths = Array.from($$('.header__form-month-wrapper'));
 
 // Display menu
 menuElement.onclick = function(e) {
